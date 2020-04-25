@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+/* *********************************************************************************************************
+ * reset
+ **********************************************************************************************************/
+body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,select,table,td,textarea,th,ul{margin:0;padding:0}
+body,button,input,select,table,textarea{font-family:'Malgun Gothic',Arial,sans-serif;line-height:1.5}
+fieldset,img{border:0}
+img,li{vertical-align:top}
+li,ol,ul{list-style:none}
+address,em{font-style:normal}
+a{color:inherit;text-decoration:none}
+a:active,a:focus,a:hover{text-decoration:underline}
+button{border:0;background:0 0;cursor:pointer}
+table{border-collapse:collapse;border-spacing:0}
+input,select{-webkit-appearance:none;-moz-appearance:none;-o-appearance:none;appearance:none;-webkit-border-radius:0;-moz-border-radius:0;-o-border-radius:0;border-radius:0;-webkit-box-shadow:none;-moz-box-shadow:none;-o-box-shadow:none;box-shadow:none;border:0}
+select::-ms-expand{display:none}
+textarea{-webkit-border-radius:0;-moz-border-radius:0;-o-border-radius:0;border-radius:0;-webkit-box-shadow:none;-moz-box-shadow:none;-o-box-shadow:none;box-shadow:none}
+input[type=search]::-ms-clear,input[type=search]::-ms-reveal,input[type=text]::-ms-clear,input[type=text]::-ms-reveal{display:none;width:0;height:0}
+input[type=search]::-webkit-search-cancel-button{-webkit-appearance:none}
+img{display:inline-block}
+button,label{cursor:pointer}
+.blind,legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1;line-height:0}
+
+body{background:#090d16}
+#wrap{overflow:hidden;min-width:1440px}
+
+/* ******************************************************************************************************
+ * form 공통
+ ****************************************************************************************************** */
+.inp_text{display:block;width:100%;height:100%}
+.inp_text input{display:block;width:100%;height:100%;padding:20px;font-size:25px;text-align:center;color:#4d4d4d;-webkit-box-sizing:border-box;box-sizing:border-box}
+.inp_text input::placeholder{color:#4d4d4d} 
+
+.inp_radio{display:inline-block;position:relative;min-width:42px;height:100%}
+.inp_radio input{position:absolute;top:0;left:0;width:0;height:0;opacity:0}
+.inp_radio input:checked+label:after{position:absolute;top:11px;left:13px;width:20px;height:20px;border-radius:50%;background:#ffd544;content:''}
+.inp_radio label{display:block;overflow:hidden;width:100%;height:100%;color:transparent}
+
+.inp_check input{position:absolute;top:0;left:0;width:0;height:0;opacity:0}
+.inp_check input:checked+label:after{position:absolute;top:9px;left:9px;width:20px;height:20px;background:#2e2e2e;content:''}
+.inp_check label{display:block;overflow:hidden;position:relative;width:100%;height:100%;color:transparent}
+
+/* ******************************************************************************************************
+ * header
+ ****************************************************************************************************** */
+.header{position:fixed;top:0;left:0;z-index:100;width:100%;padding:35px 70px;border:1px solid rgba(255, 255, 255, .12);background:rgba(0,0,0, .5);-webkit-box-sizing:border-box;box-sizing:border-box}
+.header .inner{overflow:hidden;width:100%;max-width:1920px;margin:0 auto}
+.header .logo{float:left}
+.header .logo a{display:block;position:relative;width:187px;height:70px;background:url(../../img/p/common/sp.png) 0 0 no-repeat;opacity:0.5;-webkit-transition:all .3s cubic-bezier(0.23, 1, 0.32, 1);-ms-transition:all .3s cubic-bezier(0.23, 1, 0.32, 1);transition:all .3s cubic-bezier(0.23, 1, 0.32, 1)}
+.header .logo a:hover,.header .logo a:focus{opacity:1}
+.header .util{float:left;margin:15px 0 0 54px}
+.header .util .btn{display:inline-block;overflow:hidden;margin-left:22px;background:url(../../img/p/common/sp.png) 0 0 no-repeat;vertical-align:top;color:transparent;opacity:.5}
+.header .util .btn:first-child{margin-left:0}
+.header .util .btn:hover,.header .util .btn:focus{opacity:.8;-webkit-transition:all .3s ease-in-out;-ms-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
+.header .util .btn_cafe{width:34px;height:29px;background-position:0 -74px}
+.header .util .btn_share{width:29px;height:31px;background-position:-38px -74px}
+.header .gnb{float:right;margin-top:18px}
+.header .gnb li{display:inline-block;margin-left:40px}
+.header .gnb li:first-child{margin-left:0}
+.header .gnb .btn{display:inline-block;overflow:hidden;position:relative;background:url(../../img/p/common/sp.png) no-repeat;vertical-align:top;color:transparent;opacity:.3;-webkit-transition:opacity .5s cubic-bezier(0.23, 1, 0.32, 1);-ms-transition:opacity .5s cubic-bezier(0.23, 1, 0.32, 1);transition:opacity .5s cubic-bezier(0.23, 1, 0.32, 1)}
+.header .gnb .btn.on,
+.header .gnb .btn:hover{opacity:1}
+.header .gnb .btn_register{width:221px;height:29px;background-position:-191px 0}
+.header .gnb .btn_register.on,
+.header .gnb .btn_register:hover{background-position:-191px -33px}
+.header .gnb .btn_media{width:78px;height:29px;background-position:-191px -66px}
+.header .gnb .btn_media.on,
+.header .gnb .btn_media:hover{background-position:-191px -99px}
+
+/* ******************************************************************************************************
+ * section 공통
+ ****************************************************************************************************** */
+.section{position:relative;width:1440px;margin:0 auto}
+.section:before,.section:after{position:absolute;top:0;width:560px;height:100%;background:0 0 no-repeat;content:''}
+.section:before{left:0;margin-left:-560px}
+.section:after{right:0;margin-right:-560px}
+.section_content{position:absolute;top:0;left:0;z-index:20;width:100%;height:100%;text-align:center;-webkit-box-sizing:border-box;box-sizing:border-box}
+
+/* ******************************************************************************************************
+ * main section
+ ****************************************************************************************************** */
+.main:before{background-image:url(../../img/p/main/bg_l.jpg)}
+.main:after{background-image:url(../../img/p/main/bg_r.jpg)}
+.main .video{position:absolute;top:50%;left:50%;z-index:10;width:2560px;height:100%;transform:translate3d(-50%, -50%, 0)}
+.main .video:after{position:absolute;top:0;left:0;width:100%;height:100%;background: url(../../img/p/main/bg_p.png) 0 0 repeat;content:''}
+.main .video video{width:100%;height:100%}
+.main .section_content{padding-top:404px}
+.main .title{margin:0 auto}
+.main .btn_register{display:inline-block;margin-top:67px}
+.main .box{margin-top:40px}
+.main .box .btn{display:inline-block;margin:0 17px}
+.main .copy{position:absolute;bottom:30px;left:50%;z-index:10;transform:translateX(-50%)}
+
+/* ******************************************************************************************************
+ * 사전등록 section
+ ****************************************************************************************************** */
+.register:before{background-image:url(../../img/p/register/bg_l.jpg)}
+.register:after{background-image:url(../../img/p/register/bg_r.jpg)}
+.register .section_content{padding-top:240px}
+.register .box{display:inline-block;position:relative;vertical-align:top}
+/* 보상1 */
+.register .box_banner{margin-top:20px}
+/* 보상2 */
+.register .box_reward{z-index:10;margin-top:-104px}
+.register .box_reward .stamps{position:absolute;bottom:196px;right:112px;font-size:0}
+.register .box_reward .stamp{display:inline-block;width:137px;height:137px;margin-left:45px;background:url(../../img/p/common/sp.png) -416px 0 no-repeat;opacity:0;-webkit-transform:scale(1.5);transform:scale(1.5)}
+.register .box_reward .stamp:first-child{margin:0}
+.register .attainment1 .stamp:nth-child(1){opacity:1;transform:scale(1);-webkit-transition:all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);transition:all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275)}
+.register .attainment2 .stamp:nth-child(1){opacity:1;transform:scale(1);-webkit-transition:all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);transition:all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275)}
+.register .attainment3 .stamp:nth-child(1){opacity:1;transform:scale(1);-webkit-transition:all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);transition:all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275)}
+.register .attainment4 .stamp:nth-child(1){opacity:1;transform:scale(1);-webkit-transition:all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);transition:all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275)}
+.register .attainment2 .stamp:nth-child(2){opacity:1;transform:scale(1);-webkit-transition:all 400ms 180ms cubic-bezier(0.175, 0.885, 0.32, 1.275);transition:all 400ms 180ms cubic-bezier(0.175, 0.885, 0.32, 1.275)}
+.register .attainment3 .stamp:nth-child(2){opacity:1;transform:scale(1);-webkit-transition:all 400ms 180ms cubic-bezier(0.175, 0.885, 0.32, 1.275);transition:all 400ms 180ms cubic-bezier(0.175, 0.885, 0.32, 1.275)}
+.register .attainment4 .stamp:nth-child(2){opacity:1;transform:scale(1);-webkit-transition:all 400ms 180ms cubic-bezier(0.175, 0.885, 0.32, 1.275);transition:all 400ms 180ms cubic-bezier(0.175, 0.885, 0.32, 1.275)}
+.register .attainment3 .stamp:nth-child(3){opacity:1;transform:scale(1);-webkit-transition:all 400ms 380ms cubic-bezier(0.175, 0.885, 0.32, 1.275);transition:all 400ms 360ms cubic-bezier(0.175, 0.885, 0.32, 1.275)}
+.register .attainment4 .stamp:nth-child(3){opacity:1;transform:scale(1);-webkit-transition:all 400ms 380ms cubic-bezier(0.175, 0.885, 0.32, 1.275);transition:all 400ms 360ms cubic-bezier(0.175, 0.885, 0.32, 1.275)}
+.register .attainment4 .stamp:nth-child(4){opacity:1;transform:scale(1);-webkit-transition:all 400ms 480ms cubic-bezier(0.175, 0.885, 0.32, 1.275);transition:all 400ms 480ms cubic-bezier(0.175, 0.885, 0.32, 1.275)}
+.register .progressbar{position:absolute;bottom:161px;left:448px;width:557px;height:6px}
+.register .progressbar:after{position:absolute;top:50%;left:0;width:0;height:6px;margin-top:-3px;border-radius:3px;content:'';background:#354dff;background:-webkit-linear-gradient(left, #354dff 0,#902dff 183px,#ce21e6 367px,#ef2190 557px); /* Chrome10-25,Safari5.1-6 */background: -moz-linear-gradient(left, #354dff 0, #902dff 183px, #ce21e6 367px, #ef2190 557px); /* FF3.6-15 */background: linear-gradient(to right, #354dff 0,#902dff 183px,#ce21e6 367px,#ef2190 557px); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */}
+.register .progressbar .dot{position:absolute;top:50%;z-index:1;width:12px;height:12px;margin-top:-6px;border-radius:50%;opacity:0}
+.register .progressbar .dot:nth-child(1){left:0;background:#354dff}
+.register .progressbar .dot:nth-child(2){left:183px;background:#902dff}
+.register .progressbar .dot:nth-child(3){left:367px;background:#ce21e6}
+.register .progressbar .dot:nth-child(4){left:546px;background:#ef2190}
+.register .attainment1 .progressbar:after{width:18%;-webkit-transition:all 200ms;transition:all 200ms}
+.register .attainment2 .progressbar:after{width:50%;-webkit-transition:all 400ms;transition:all 400ms}
+.register .attainment3 .progressbar:after{width:83%;-webkit-transition:all 600ms;transition:all 600ms}
+.register .attainment4 .progressbar:after{width:100%;-webkit-transition:all 800ms;transition:all 800ms}
+.register .attainment1 .progressbar .dot:nth-child(1){opacity:1;-webkit-transition:all 100ms;transition:all 100ms}
+.register .attainment2 .progressbar .dot:nth-child(1){opacity:1;-webkit-transition:all 100ms;transition:all 100ms}
+.register .attainment3 .progressbar .dot:nth-child(1){opacity:1;-webkit-transition:all 100ms;transition:all 100ms}
+.register .attainment4 .progressbar .dot:nth-child(1){opacity:1;-webkit-transition:all 100ms;transition:all 100ms}
+.register .attainment2 .progressbar .dot:nth-child(2){opacity:1;-webkit-transition:all 100ms 180ms;transition:all 100ms 180ms}
+.register .attainment3 .progressbar .dot:nth-child(2){opacity:1;-webkit-transition:all 100ms 180ms;transition:all 100ms 180ms}
+.register .attainment4 .progressbar .dot:nth-child(2){opacity:1;-webkit-transition:all 100ms 180ms;transition:all 100ms 180ms}
+.register .attainment3 .progressbar .dot:nth-child(3){opacity:1;-webkit-transition:all 100ms 380ms;transition:all 100ms 380ms}
+.register .attainment4 .progressbar .dot:nth-child(3){opacity:1;-webkit-transition:all 100ms 380ms;transition:all 100ms 380ms}
+.register .attainment4 .progressbar .dot:nth-child(4){opacity:1;-webkit-transition:all 100ms 700ms;transition:all 100ms 700ms}
+/* 폼 영역 */
+.register .box_form{z-index:30;margin-top:-15px}
+.register .box_form .form_group{position:absolute}
+/* 폼 영역 - 라디오 버튼 */
+.register .form_radio{top:0;left:0;height:44px}
+.register .form_radio .inp_radio{float:left}
+.register .form_radio .inp_radio_ios{width:120px}
+.register .form_radio .inp_radio_and{width:170px;margin-left:30px}
+/* 폼 영역 - 텍스트필드 */
+.register .form_phone,
+.register .form_number{position:absolute;top:60px;left:0;width:100%;height:100px;padding-right:343px;-webkit-box-sizing:border-box;box-sizing:border-box}
+.register .form_number{top:172px}
+.register .form_phone button,
+.register .form_number button{position:absolute;top:0;right:0;width:332px;height:100%;color:transparent}
+/* 폼 영역 - 체크박스 */
+.register .form_info,
+.register .form_noti{position:absolute;top:292px;left:0;width:608px;height:38px;padding-right:94px;-webkit-box-sizing:border-box;box-sizing:border-box}
+.register .form_noti{top:345px;width:578px}
+.register .form_noti button,
+.register .form_info button{position:absolute;top:0;right:0;width:94px;height:100%;color:transparent}
+.register .btn_submit{margin-top:50px}
+/* 우주선 */
+.spaceship1{position:absolute;top:293px;left:-570px;opacity:0;-webkit-transform:scale(.2);-ms-transform:scale(.2);transform:scale(.2);-webkit-transform-origin:top left;-ms-transform-origin:top left;transform-origin:top left;-webkit-transition:all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);-ms-transition:all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);transition:all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1)}
+.spaceship1.active{opacity:1;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-animation:spaceship1 2s linear .8s infinite alternate;animation:spaceship1 2s linear .8s infinite alternate}
+@-webkit-keyframes spaceship1 {from{top:293px} to{top:280px}}
+@keyframes spaceship1 {from{top:293px} to{top:280px}}
+.spaceship2{position:absolute;bottom:400px;right:-600px;z-index:20;opacity:0;-webkit-transform:scale(.2);-ms-transform:scale(.2);transform:scale(.2);-webkit-transform-origin:bottom left;-ms-transform-origin:bottom left;transform-origin:bottom left;-webkit-transition:all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);-ms-transition:all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);transition:all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1)}
+.spaceship2.active{opacity:1;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-animation:spaceship2 2s linear .8s infinite alternate;animation:spaceship2 2s linear .8s infinite alternate}
+@-webkit-keyframes spaceship2 {from{bottom:400px} to{bottom:380px}}
+@keyframes spaceship2 {from{bottom:400px} to{bottom:380px}}
+
+/* ******************************************************************************************************
+ * 미디어 section
+ ****************************************************************************************************** */
+.media:before{background-image:url(../../img/p/media/bg_l.jpg)}
+.media:after{background-image:url(../../img/p/media/bg_r.jpg)}
+.media .section_content{padding-top:240px}
+/* 슬라이드기본 */
+.media .swiper_wrap{position:relative;width:1096px;margin:69px auto 0}
+.media .swiper_wrap .swiper{overflow:hidden;width:100%}
+.media .swiper_wrap .slides{font-size:0;white-space:nowrap}
+.media .swiper_wrap .slide{display:inline-block;padding:0 16px}
+.media .swiper_wrap .btn{display:none;position:absolute;top:50%;width:38px;height:75px;background:url(../../img/p/common/sp.png) no-repeat;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
+.media .swiper_wrap .btn_prev{left:-80px;background-position:-71px -74px}
+.media .swiper_wrap .btn_next{right:-80px;background-position:-113px -74px}
+/* 플레이 아이콘 */
+.media .swiper_wrap .btn_play{position:relative}
+.media .swiper_wrap .btn_play .ico_play{position:absolute;top:50%;left:50%;width:181px;height:181px;margin:-90px 0 0 -90px;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);-ms-transition:all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);transition:all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1)}
+.media .swiper_wrap .btn_play .ico_play:before,.media .swiper_wrap .ico_play:after{position:absolute;top:0;left:0;width:100%;height:100%;background:url(../../img/p/common/sp.png) no-repeat;-webkit-transition:all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);-ms-transition:all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);transition:all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);content:''}
+.media .swiper_wrap .btn_play .ico_play:before{background-position:0 -338px;opacity:1}
+.media .swiper_wrap .btn_play .ico_play:after{background-position:0 -153px;opacity:0}
+.media .swiper_wrap .btn_play:hover .ico_play,
+.media .swiper_wrap .btn_play:hover .ico_play{transform: scale(1.05)}
+.media .swiper_wrap .btn_play:hover .ico_play:before,
+.media .swiper_wrap .btn_play:hover .ico_play:before{opacity:0}
+.media .swiper_wrap .btn_play:hover .ico_play:after,
+.media .swiper_wrap .btn_play:focus .ico_play:after{opacity:1}
+/* 가로 노랑 라인 */
+.media .swiper_wrap .btn_play .line_h{position:absolute;top:0;left:0;width:100%;height:100%}
+.media .swiper_wrap .btn_play .line_h:before,
+.media .swiper_wrap .line_h:after{position:absolute;width:0;height:2px;background:url(../../img/p/common/sp.png) 0 -523px no-repeat;-webkit-transition:all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);-ms-transition:all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);transition:all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);content:''}
+.media .swiper_wrap .btn_play .line_h:before{top:0;left:0}
+.media .swiper_wrap .btn_play .line_h:after{bottom:0;right:0;-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}
+.media .swiper_wrap .btn_play:hover .line_h:before,
+.media .swiper_wrap .btn_play:hover .line_h:after,
+.media .swiper_wrap .btn_play:focus .line_h:before,
+.media .swiper_wrap .btn_play:focus .line_h:after{width:100%}
+/* 세로 노랑 라인 */
+.media .swiper_wrap .btn_play .line_v{position:absolute;top:0;left:0;width:100%;height:100%}
+.media .swiper_wrap .btn_play .line_v:before,.media .swiper_wrap .line_v:after{position:absolute;width:2px;height:0;background:url(../../img/p/common/sp.png) -187px -153px no-repeat;-webkit-transition:all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);-ms-transition:all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);transition:all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);content:''}
+.media .swiper_wrap .btn_play .line_v:before{top:0;left:0}
+.media .swiper_wrap .btn_play .line_v:after{bottom:0;right:0;-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}
+.media .swiper_wrap .btn_play:hover .line_v:before,
+.media .swiper_wrap .btn_play:hover .line_v:after,
+.media .swiper_wrap .btn_play:focus .line_v:before,
+.media .swiper_wrap .btn_play:focus .line_v:after{height:100%}
+
+/* ******************************************************************************************************
+ * 팝업
+ ****************************************************************************************************** */
+.dialog_wrapper{display:none;position:fixed;top:0;left:0;z-index:200;width:100%;height:100%;background:rgba(0,0,0,.8);text-align:center;white-space:nowrap;}
+.dialog_wrapper:after{display:inline-block;width:0;height:100%;vertical-align:middle;content:''}
+.dialog_wrapper .dialog{display:inline-block;position:relative;vertical-align:middle}
+.dialog_wrapper .dialog img{display:block}
+.dialog_wrapper .btn_confirm{position:absolute;bottom:97px;left:50%;width:360px;height:140px;background:url(about:blank);-webkit-transform:translateX(-50%);transform:translateX(-50%)}
+.dialog_wrapper .btn_close{position:absolute;top:17px;right:14px;width:140px;height:140px;background:url(about:blank)}
+.dialog_wrapper .dialog_video{padding:10px;border:1px solid #fff}
+.dialog_wrapper .dialog_video iframe{width:970px;height:614px;box-shadow:0 5px 10px rgba(0,0,0,0.8);background: #000;}
+.dialog_wrapper .dialog_video .btn_close{top:0;right:0;width:80px;height:80px;margin-right:-80px}
+.dialog_wrapper .dialog_video .btn_close:after{display:inline-block;width:36px;height:36px;background:url(../../img/p/common/sp.png)0 -529px no-repeat;content:''}
