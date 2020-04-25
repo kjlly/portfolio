@@ -1,0 +1,32 @@
+{
+  "editor.fontFamily": "D2Coding, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 14,
+
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+
+  "files.eol": "\n",
+  "files.encoding": "utf8",
+
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true
+  },
+
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/bundle": true,
+    "**/bower_components": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true
+  },
+
+  "editor.codeActionsOnSave": {
+    "editor.formatOnSave": false,
+    "source.fixAll.eslint": false,
+    "source.fixAll.tslint": false,
+    "source.fixAll.stylelint": false
+  }
+}
