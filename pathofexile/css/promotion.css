@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+/* layout */
+.wrap, .container, .content{width:100%;height:100%}
+
+/* header */
+.header{position:absolute;top:0;left:0;width:100%}
+.header .logo{float:left;margin:27px 0 0 38px}
+.header .logo a{display:block;width:114px;height:88px;background:url(../img/header/poe-logo.png) 0 0 no-repeat;font-size:1px;color:transparent}
+.header .gnb{float:right;margin:28px 8px 0 0}
+.header .gnb li{float:left}
+.header .gnb a{display:block;overflow:hidden;width:85px;height:79px;background:url(../img/header/btn-gnb.png) no-repeat;font-size:1px;color:transparent}
+.header .gnb a.is-home{background-position:0 0}
+.header .gnb a.is-home:hover{background-position:0 100%}
+.header .gnb a.is-stop{background-position:100% 0}
+.header .gnb a.is-stop:hover{background-position:100% 100%}
+.header .nav_wrap{position:fixed;top:50%;right:25px;z-index:999;margin-top:-332px}
+.header .nav{background:0 0 no-repeat;font-size:0;line-height:0}
+.header .nav a:hover,.header .nav a:focus{opacity:1}
+.header .nav a{display:block;background-repeat:no-repeat;font-size:1px;color:transparent;opacity:0;-webkit-transition:opacity 300ms;-moz-transition:opacity 300ms;-ms-transition:opacity 300ms;transition:opacity 300ms}
+.header .nav.is-banner{background-image:url(../img/header/btn-banner.png)}
+.header .nav.is-banner li a{width:139px;background-image:url(../img/header/btn-banner.png)}
+.header .nav.is-banner li:nth-child(1) a{height:202px;background-position:100% 0}
+.header .nav.is-banner li:nth-child(2) a{height:100px;background-position:100% 100%}
+.header .nav.is-lnb{background-image:url(../img/header/btn-lnb.png)}
+.header .nav.is-lnb li a{width:139px;height:70px;background-image:url(../img/header/btn-lnb.png)}
+.header .nav.is-lnb li:nth-child(1) a{background-position:100% 0}
+.header .nav.is-lnb li:nth-child(2) a{background-position:100% -70px}
+.header .nav.is-lnb li:nth-child(3) a{background-position:100% -140px}
+.header .nav.is-lnb li:nth-child(4) a{background-position:100% -210px}
+
+/* section 공통 */
+.section{width:100%;height:100vh;min-height:1000px;white-space:nowrap;text-align:center;background:50% no-repeat;background-size:cover}
+.section:after{display:inline-block;width:0;height:100%;vertical-align:middle;content:''}
+.section .inner{display:inline-block;width:942px;white-space:normal;vertical-align:middle}
+.section .title{margin:0 auto;background:50% no-repeat;font-size:1px;color:transparent}
+.section .card{display:inline-block}
+.section .card:after{display:block;clear:both;content:''}
+.section .card li{float:left}
+.section .card a{display:block;background:0 0 no-repeat;font-size:1px;color:transparent;-webkit-transition:transform 300ms;-moz-transition:transform 300ms;-ms-transition:transform 300ms;transition:transform 300ms;-webkit-transform:translateY(0);-moz-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0)}
+.section .card a:hover,.section .card a:focus{background-position:0 100%;-webkit-transform:translateY(-6px);-moz-transform:translateY(-6px);-ms-transform:translateY(-6px);transform:translateY(-6px)}
+
+/* 입문자(초보자) 가이드 :: section */
+.section-beginner{background-image:url(../img/section-beginner/bg.jpg)}
+.section-beginner .title{width:100%;height:147px;background-image:url(../img/section-beginner/title.png)}
+.section-beginner .card.is-main{width:100%;margin-top:-5px;padding-bottom:4px}
+.section-beginner .card.is-main a{width:306px;height:356px}
+.section-beginner .card.is-main li:nth-child(1) a{background-image:url(../img/section-beginner/guide-card1.png)}
+.section-beginner .card.is-main li:nth-child(2) a{background-image:url(../img/section-beginner/guide-card2.png)}
+.section-beginner .card.is-main li:nth-child(3) a{background-image:url(../img/section-beginner/guide-card3.png)}
+.section-beginner .card.is-video{width:100%;margin:24px 0 0 13px}
+.section-beginner .card.is-video li{padding:0 0 24px 11px}
+.section-beginner .card.is-video li a{width:215px;height:215px}
+.section-beginner .card.is-video li:nth-child(1) a{background-image:url(../img/section-beginner/guide-vod-card1.png)}
+.section-beginner .card.is-video li:nth-child(2) a{background-image:url(../img/section-beginner/guide-vod-card2.png)}
+.section-beginner .card.is-video li:nth-child(3) a{background-image:url(../img/section-beginner/guide-vod-card3.png)}
+.section-beginner .card.is-video li:nth-child(4) a{background-image:url(../img/section-beginner/guide-vod-card4.png)}
+
+/* 복귀자 가이드 ::section */
+.section-returner{background-image:url(../img/section-returner/bg.jpg)} 
+.section-returner .title{width:100%;height:147px;background-image:url(../img/section-returner//title.png)}
+.section-returner .card.is-line1{margin-top:35px}
+.section-returner .card.is-line2{margin-top:-6px}
+.section-returner .card{width:100%;padding:0 12px}
+.section-returner .card li{position:relative;width:282px;height:285px;padding:12px;-webkit-transition:transform 300ms;-moz-transition:transform 300ms;-ms-transition:transform 300ms;transition:transform 300ms}
+.section-returner .card li:hover{background-position:0 100%;-webkit-transform:translateY(-10px);-moz-transform:translateY(-10px);-ms-transform:translateY(-10px);transform:translateY(-10px)}
+.section-returner .card li a{background-image:url(../img/section-returner/btn-detail.png);position:absolute;overflow:hidden;bottom:28px;left:46px;width:214px;height:62px}
+.section-returner .card li .legion{bottom:28px;left:46px;background-image:url(../img/section-returner/btn-legion.png)}
+.section-returner .card li .blight{bottom:28px;left:146px;background-image:url(../img/section-returner/btn-blight.png)}
+.section-returner .card li .vod{background-image:url(../img/section-returner/btn-vod.png)}
+.section-returner .card li a:hover{-webkit-transform:none;-moz-transform:none;-ms-transform:none;transform:none}
+.section-returner .card li a span{position:absolute;top:0;left:0;width:100%;height:100%;background-position-y:bottom;-webkit-transition:opacity 300ms;-moz-transition:opacity 300ms;-ms-transition:opacity 300ms;transition:opacity 300ms} 
+
+/* 추천 영상 가이드 ::section */
+.section-build{background-image:url(../img/section-build/bg.jpg)} 
+.section-build .title{width:100%;height:100px;background-image:url(../img/section-build/title.png)}
+.section-build .card{margin-top:39px;padding:0 60px}
+.section-build .card li{padding:12px}
+.section-build .card a{position:relative;width:250px;height:202px;background-color:#16181a}
+.section-build .card .icon-play{position:absolute;top:45px;left:99px;z-index:1;width:52px;height:52px;background:url(../img/section-build/icon-play.png)50% 50% no-repeat;opacity:1}
+.section-build .card .build-thumb{display:block;width:250px;height:140px;overflow:hidden}
+.section-build .card .build-thumb img{width:250px;transform:translateY(-24px);opacity:0.5}
+.section-build .card .build-thumb img:hover{opacity:1}
+.section-build .card .build-title{display:block;box-sizing:border-box;width:100%;padding:7px 15px 0;font-size:14px;font-weight:400;line-height:22px;text-align:left;color:#f6f3ee}
+.section-build .card .build-info{display:block;width:100%;overflow:hidden}
+.section-build .card .build-score{float:left;padding:4px 6px 4px 15px;font-size:14px;font-weight:400;color:#9f9d9a}
+.section-build .card .icon-star{display:inline-block;float:left;position:relative;top:3px;width:83px;height:23px;vertical-align:middle;overflow:hidden}
+.section-build .card .star4 img{-webkit-transform:translateY(-50px);-moz-transform:translateY(-50px);-ms-transform:translateY(-50px);transform:translateY(-50px)}
+.section-build .card .star5 img{-webkit-transform:translateY(-50px);-moz-transform:translateY(-50px);-ms-transform:translateY(-50px);transform:translateY(-50px)}
+.section-build .card .star2 img{-webkit-transform:translateY(-50px);-moz-transform:translateY(-50px);-ms-transform:translateY(-50px);transform:translateY(-50px)}
+.section-build .card .build-spec{display:block;float:right;padding:4px 15px 4px 6px;font-size:14px;font-weight:400;color:#9f9d9a}
+.section-build .card .build-spec .spec{display:inline-block;padding-right:7px;margin-right:7px;background:url(../img/section-build/icon-weight-bar.png)no-repeat 100% -2px}
+
+/* 추천 패키지 ::section */
+.section-package{background-image:url(../img/section-package/bg.jpg)}
+.section-package .title{width:100%;height:61px;background-image:url(../img/section-package/title.png)}
+.section-package .card{margin-top:55px}
+.section-package .card li{position:relative;padding:0 12px;-webkit-transition:transform 300ms;-moz-transition:transform 300ms;-ms-transition:transform 300ms;transition:transform 300ms}
+.section-package .card li:hover{background-position:0 100%;-webkit-transform:translateY(-10px);-moz-transform:translateY(-10px);-ms-transform:translateY(-10px);transform:translateY(-10px)}
+.section-package .card li a:hover{-webkit-transform:none;-moz-transform:none;-ms-transform:none;transform:none}
+.section-package .card .vod{background-image:url(../img/section-package/btn-vod.png);display:block;position:absolute;top:442px;left:71px;width:150px;height:60px;overflow:hidden}
+.section-package .card .detail{background-image:url(../img/section-package/btn-detail.png);display:block;position:absolute;top:442px;left:223px;width:150px;height:60px;overflow:hidden}
+
+/* footer */
+.footer{width:100%;height:140px;background:#131211}
+.footer .wrap-logo{padding-top:24px;text-align:center}
+.footer .wrap-logo .footer-logo{display:inline-block;margin:17px 24px 0 0}
+.footer .info-copyright{display:block;margin-top:17px;font-family:'맑은 고딕','Malgun Gothic';font-size:12px;font-weight:400;line-height:19px;color:#898381;text-align:center} 
