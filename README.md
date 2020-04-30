@@ -30,8 +30,8 @@ html 스터디에 참여하게 되었고 코딩이라는 세계를 처음 접하
 스타트랙 모바일 게임 사전등록 이벤트 사이트로 HTML, CSS를 맡아 작업한 프로젝트입니다. 프론트앤드 개발자의 도움을 받아 약 2주간 진행한 프로젝트로 2019년 10월 실제로 오픈한 사이트입니다. 사전등록 영역은 백앤드 작업이 한 번에 끝나도록 PC/Mobile 마크업 구조를 최대한 동일하게 진행하였습니다. 
 
 * Preview:
-  * PC: https://kjlly.github.io/portfolio/stfc/index.html
-  * Mobile: https://kjlly.github.io/portfolio/stfc/mobile.html
+  * PC: https://kjlly.github.io/portfolio/stfc/p.html
+  * Mobile: https://kjlly.github.io/portfolio/stfc/m.html
 * 작업기여도:
   * HTML(80%): 슬라이드, 모달을 제외한 모든 마크업 작업
   * CSS(80%): 슬라이드, 모달을 제외한 모든 CSS 작업
